@@ -1,6 +1,6 @@
 {
 	"name": "nl.ROBBshop.ROBB-smarrt",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"description": "This app adds support for the [ROBB smarrt devices](https://www.robbshop.nl/manufacturers/robb-smarrt) sold by [ROBBshop.nl](https://www.ROBBshop.nl).",
 	"main": "app.js",
 	"dependencies": {
@@ -15,7 +15,7 @@
 		"type": "git",
 		"url": "git+https://github.com/ROBB-smarrt/nl.ROBBshop.ROBB-smarrt.git"
 	},
-	"author": "Ted Tolboom",
+	"author": "ROBBshop.nl",
 	"license": "GPLv3",
 	"bugs": {
 		"url": "https://github.com/ROBB-smarrt/nl.ROBBshop.ROBB-smarrt/issues"
