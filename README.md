@@ -12,7 +12,7 @@ This app adds support for the ROBB smarrt Z-wave and Zigbee device sold by [ROBB
 ## Supported devices
 
 ### Z-wave devices
-* [Dimmer - 3 wire](https://www.robbshop.nl/inbouwdimmer-zwave-3-draads-robb-smarrt)
+* [Dimmer - 3 wire](https://www.robbshop.nl/inbouwdimmer-zwave-3-draads-robb-smarrt) (onoff, dim)
 * [Wall controller 2 groups](https://www.robbshop.nl/wandzender-2v-z-wave-robb-smarrt) (1x click, Key held, Key released, direct association towards other Z-wave devices)
 * [Wall controller 8 groups](https://www.robbshop.nl/wandzender-8v-z-wave-robb-smarrt) (1x click, Key held, Key released, direct association towards other Z-wave devices)
 * More Z-wave devices will follow soon
@@ -41,6 +41,6 @@ If possible, please report issues at the issues section on Github otherwise in t
 
 ### v 1.0.0
 * Initial app store release
-* Add support for [Dimmer - 3 wire](https://www.robbshop.nl/inbouwdimmer-zwave-3-draads-robb-smarrt)   
-* Add support for [Wall controller 2 groups](https://www.robbshop.nl/wandzender-2v-z-wave-robb-smarrt)  
-* Add support for [Wall controller 8 groups](https://www.robbshop.nl/wandzender-8v-z-wave-robb-smarrt)    
+* Add support for [Dimmer - 3 wire (Z-wave)](https://www.robbshop.nl/inbouwdimmer-zwave-3-draads-robb-smarrt)   
+* Add support for [Wall controller 2 groups (Z-wave)](https://www.robbshop.nl/wandzender-2v-z-wave-robb-smarrt)  
+* Add support for [Wall controller 8 groups (Z-wave)](https://www.robbshop.nl/wandzender-8v-z-wave-robb-smarrt)    
