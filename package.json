@@ -1,0 +1,24 @@
+{
+	"name": "nl.ROBBshop.ROBB-smarrt",
+	"version": "0.0.1",
+	"description": "This app adds support for the [ROBB smarrt devices](https://www.robbshop.nl/manufacturers/robb-smarrt) sold by [ROBBshop.nl](https://www.ROBBshop.nl).",
+	"main": "app.js",
+	"dependencies": {
+		"homey-meshdriver": "^1.2.32"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"run": "athom app run",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ROBB-smarrt/nl.ROBBshop.ROBB-smarrt.git"
+	},
+	"author": "Ted Tolboom",
+	"license": "GPLv3",
+	"bugs": {
+		"url": "https://github.com/ROBB-smarrt/nl.ROBBshop.ROBB-smarrt/issues"
+	},
+	"homepage": "https://www.robbshop.nl/manufacturers/robb-smarrt"
+}

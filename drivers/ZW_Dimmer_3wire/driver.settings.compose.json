@@ -1,0 +1,26 @@
+[
+  {
+    "$extends": "saveState",
+    "$id": "save_state"
+  },
+  {
+    "$extends": "sendBasicReport",
+    "$id": "send_basic_reprot"
+  },
+  {
+    "$extends": "dimDuration",
+    "$id": "dim_duration"
+  },
+  {
+    "$extends": "minimumBrightness",
+    "$id": "minimum_brightness"
+  },
+  {
+    "$extends": "drivingType",
+    "$id": "driving_type"
+  },
+  {
+    "$extends": "externalSwitch",
+    "$id": "external_switch"
+  }
+]

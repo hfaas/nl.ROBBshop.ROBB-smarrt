@@ -1,0 +1,23 @@
+{
+  "value": 0,
+  "label": {
+    "en": "Minimum brightness value",
+    "nl": "Laagste dim niveau"
+  },
+  "hint": {
+    "en": "Setting minimum brightness value"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the minimum brightness level. Default: 0 %",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het laagste dim niveau. Standaard: 0 %"
+  },
+  "zwave": {
+    "index": 5,
+    "size": 1
+  },
+  "attr": {
+    "min": 0,
+    "max": 50
+  },
+  "type": "number"
+}

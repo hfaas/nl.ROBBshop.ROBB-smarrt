@@ -1,0 +1,41 @@
+{
+	"id": "wall_controller_button",
+	"title": {
+		"en": "A button has been pressed",
+		"nl": "Een knop is ingedrukt"
+	},
+	"hint": {
+		"en": "This card will trigger on any button pressed and provides the scene tokens.",
+		"nl": "Deze kaart wordt geactiveerd bij iedere knop die ingedrukt wordt en biedt de scene tokens aan."
+	},
+	"args": [{
+			"name": "device",
+			"type": "device",
+			"filter": "driver_id=ZW_WallController_8"
+	}
+    			],
+	"tokens": [
+		{
+			"name": "button",
+			"type": "string",
+			"title": {
+				"en": "button",
+				"nl": "knop"
+			},
+			"example": {
+				"en": "0"
+			}
+    			},
+		{
+			"name": "scene",
+			"type": "string",
+			"title": {
+				"en": "scene",
+				"nl": "scene"
+			},
+			"example": {
+				"en": "Button pressed (test)"
+			}
+    				}
+    			]
+}

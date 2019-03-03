@@ -1,0 +1,31 @@
+{
+  "value": "0",
+  "label": {
+    "en": "MOSFET driving type"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the used MOSFET driving type. Default: Leading edge",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de gebruikte MOSFET driving type. Standaard: Fase aansnijding"
+  },
+  "zwave": {
+    "index": 2,
+    "size": 1
+  },
+  "values": [
+    {
+      "id": "0",
+      "label": {
+        "en": "Leading edge (default)",
+        "nl": "Fase aansnijding (standaard)"
+      }
+    },
+    {
+      "id": "1",
+      "label": {
+        "en": "Trailing edge",
+        "nl": "Fase afsnijding"
+      }
+    }
+  ],
+  "type": "dropdown"
+}

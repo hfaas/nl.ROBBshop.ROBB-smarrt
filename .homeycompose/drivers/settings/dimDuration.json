@@ -1,0 +1,21 @@
+{
+  "label": {
+    "en": "Dim duration",
+    "nl": "Dim transitietijd"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the default dim duration. Values: 1 - 127 seconds, 0: Instantly. Default: 1 second",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de standaard dim transitietijd in seconden. Waardes: 1 - 127 seconden, 0: Instantaan. Standaard: 1 seconde"
+  },
+  "zwave": {
+    "index": 4,
+    "size": 1,
+    "signed": false
+  },
+  "type": "number",
+  "value": 1,
+  "attr": {
+    "min": 0,
+    "max": 127
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "value": true,
+  "label": {
+    "en": "Send `BASIC report`",
+    "nl": "Stuur `BASIC report`"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines whether the `BASIC report` is send to the Lifeline when the load state changed. Default: activated",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het `BASIC report` wordt verstuurd naar de controller wanneer de toestand van de dimmer verandert. Standaard: ingeschakeld"
+  },
+  "zwave": {
+    "index": 3,
+    "size": 1
+  },
+  "type": "checkbox"
+}

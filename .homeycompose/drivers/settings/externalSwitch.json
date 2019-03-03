@@ -1,0 +1,16 @@
+{
+  "value": true,
+  "label": {
+    "en": "Enable external switch",
+    "nl": "External schakelaar gebruiken"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the option to use an external switch to include or exclude the device from the network.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) schakelt de optie in om een externe schakelaar te gebruiken om de dimmer toe te voegen of te verwijderen uit het netwerk."
+  },
+  "zwave": {
+    "index": 7,
+    "size": 1
+  },
+  "type": "checkbox"
+}
