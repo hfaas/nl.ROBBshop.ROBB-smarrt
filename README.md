@@ -43,7 +43,7 @@ If possible, please report issues at the issues section on Github otherwise in t
 ### v 1.0.1
 * Add support for [Dimmer - 3 wire (Zigbee)](https://www.robbshop.nl/inbouwdimmer-zigbee-robb-smarrt)   
 * Add 'Set forced brightness' flow action card for Zigbee dimmers   
-* Minor improvements to icons of Dimmer - 3 wire (Z-wave)](https://www.robbshop.nl/inbouwdimmer-zwave-3-draads-robb-smarrt)   
+* Minor improvements to icons of [Dimmer - 3 wire (Z-wave)](https://www.robbshop.nl/inbouwdimmer-zwave-3-draads-robb-smarrt)   
 
 ### v 1.0.0
 * Initial app store release
