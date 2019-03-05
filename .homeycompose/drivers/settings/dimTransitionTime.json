@@ -1,0 +1,16 @@
+{
+  "label": {
+    "en": "Dim Transition time",
+    "nl": "Dim transitietijd"
+  },
+  "hint": {
+    "en": "This parameter (`onOffTransitionTime`) determines the default dim tranistion time in 1/10 of a seconds between states (on, off, dim-level). Default: 1 (= 1/10th second)",
+    "nl": "Deze parameter (`onOffTransitionTime`) bepaalt de standaard dim transitietijd in 1/10 van een second tussen toestanden (aan, uit, dimniveau). Standaard: 1 (= 1/10th second)"
+  },
+  "type": "number",
+  "value": 1,
+  "attr": {
+    "min": 0,
+    "max": 36000
+  }
+}

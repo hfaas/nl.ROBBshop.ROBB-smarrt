@@ -1,0 +1,10 @@
+[
+  {
+    "$extends": "forcedBrightness",
+    "$id": "forced_brightness_level"
+  },
+  {
+    "$extends": "dimTransitionTime",
+    "$id": "dim_transition_time"
+  }
+]

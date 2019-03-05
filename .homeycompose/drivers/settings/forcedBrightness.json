@@ -1,0 +1,16 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Forced brightness",
+    "nl": "Geforceerde helderheid"
+  },
+  "value": 101,
+  "attr": {
+    "min": 0,
+    "max": 101
+  },
+  "hint": {
+    "en": "This parameter (`onLevel`) determines whether or not switching on the dimmer will always set this brightness level (0 - 100) or return to the previous level (101).",
+    "nl": "Deze parameter ('onLevel') bepaalt of het aanzetten van de dimmer altijd dit helderheidsniveau (0 - 100) instelt of terugkeert naar het vorige niveau (101)."
+  }
+}
