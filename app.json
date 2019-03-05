@@ -1,6 +1,6 @@
 {
   "id": "nl.ROBBshop.ROBB-smarrt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": ">=1.5.13",
   "sdk": 2,
   "brandColor": "#f28c00",
@@ -133,9 +133,143 @@
           }
         ]
       }
+    ],
+    "actions": [
+      {
+        "title": {
+          "en": "Set forced brightness",
+          "nl": "Stel geforceerde helderheid in"
+        },
+        "hint": {
+          "en": "Change the \"set forced brightness\" parameter of your dimmer. If this parameter is active, switching on the Dimmer 2 (S1 single click) will always set this brightness level, 0 will disable this function.",
+          "nl": "Stel de \"geforceerde helderheid\" parameter van een dimmer in. Wanneer deze parameter actief is, zal bij het inschakelen van Dimmer 2 (S1 single click) altijd naar deze helderheid inschakelen, 0 schakelt deze functie uit."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZB_Dimmer_3wire"
+          },
+          {
+            "type": "dropdown",
+            "name": "enable_set_forced_brightness",
+            "values": [
+              {
+                "id": "enabled",
+                "label": {
+                  "en": "Enabled",
+                  "nl": "Ingeschakeld"
+                }
+              },
+              {
+                "id": "disabled",
+                "label": {
+                  "en": "Disabled",
+                  "nl": "Uitgeschakeld"
+                }
+              }
+            ]
+          },
+          {
+            "name": "set_forced_brightness_level",
+            "type": "range",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "label": "%",
+            "labelMultiplier": 100
+          }
+        ],
+        "id": "ZB_dim_set_forced_brightness"
+      }
     ]
   },
   "drivers": [
+    {
+      "id": "ZB_Dimmer_3wire",
+      "name": {
+        "en": "Dimmer - 3 wire (Zigbee)",
+        "nl": "Inbouwdimmer 3-draads (Zigbee)"
+      },
+      "class": "light",
+      "capabilities": [
+        "dim",
+        "onoff"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        },
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "icon": "/drivers/ZB_Dimmer_3wire/assets/icon.svg",
+      "images": {
+        "large": "/drivers/ZB_Dimmer_3wire/assets/images/large.png",
+        "small": "/drivers/ZB_Dimmer_3wire/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Sunricher",
+        "productId": [
+          "ZG9101SAC-HP"
+        ],
+        "deviceId": 257,
+        "profileId": 260,
+        "learnmode": {
+          "image": "/drivers/ZB_Dimmer_3wire/assets/learnmode.svg",
+          "instruction": {
+            "en": "1. Power on the in-wall dimmer and set it into inclusion mode. \nThere are two methods to set the in-wall dimmer into inclusion mode:\n1)Repower on the dimmer, it will be set into inclusion mode automatically, and waiting to be included.\n2)Triple press the reset button on the dimmer, it will set the plug into inclusion mode.\nThe connected light will stay solid on for 3 seconds to indicate successful inclusion.",
+            "nl": "1. Schakel de inbouwdimmer in en activeer de inclusion modus. \nDe inclusion modus wordt geactiveerd op de volgende twee mmanieren:\n1)Stroom opnieuw inschakelen op de dimmer, waarna de dimmer automatisch de inclusion mode activeerd en wacht om toegevoegd te worden. \n2)Drie keer de reset knop op de dimmer indrukken activeert de inclusion modus.\nDe aangesloten lamp brand gedurende 3 seconden wanneer het toevoegen succesvol afgerond is."
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/ZB_Dimmer_3wire/assets/learnmode.svg",
+          "instruction": {
+            "en": "To remove the dimmer, triple press the reset button. \nThe dimmer will be set to exclusion mode, and waiting to be excluded, then the dimmer will be excluded to the network.",
+            "nl": "Om de dimmer te verwijderen, druk drie keer de reset knop op de dimmer in. \n De exclusion modus van de dimmer wordt geactiveerd en de dimmer wordt verwijdert uit het netwerk."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "forced_brightness_level",
+          "type": "number",
+          "label": {
+            "en": "Forced brightness",
+            "nl": "Geforceerde helderheid"
+          },
+          "value": 101,
+          "attr": {
+            "min": 0,
+            "max": 101
+          },
+          "hint": {
+            "en": "This parameter (`onLevel`) determines whether or not switching on the dimmer will always set this brightness level (0 - 100) or return to the previous level (101).",
+            "nl": "Deze parameter ('onLevel') bepaalt of het aanzetten van de dimmer altijd dit helderheidsniveau (0 - 100) instelt of terugkeert naar het vorige niveau (101)."
+          }
+        },
+        {
+          "id": "dim_transition_time",
+          "label": {
+            "en": "Dim Transition time",
+            "nl": "Dim transitietijd"
+          },
+          "hint": {
+            "en": "This parameter (`onOffTransitionTime`) determines the default dim tranistion time in 1/10 of a seconds between states (on, off, dim-level). Default: 1 (= 1/10th second)",
+            "nl": "Deze parameter (`onOffTransitionTime`) bepaalt de standaard dim transitietijd in 1/10 van een second tussen toestanden (aan, uit, dimniveau). Standaard: 1 (= 1/10th second)"
+          },
+          "type": "number",
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 36000
+          }
+        }
+      ]
+    },
     {
       "id": "ZW_Dimmer_3wire",
       "name": {

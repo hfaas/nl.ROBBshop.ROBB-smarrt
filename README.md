@@ -18,7 +18,8 @@ This app adds support for the ROBB smarrt Z-wave and Zigbee device sold by [ROBB
 * More Z-wave devices will follow soon
 
 ### Zigbee devices
-* Zigbee devices will follow soon
+* [Dimmer - 3 wire](https://www.robbshop.nl/inbouwdimmer-zigbee-robb-smarrt) (onoff-, dim- capabilities and 'set forced brightness' action card)
+* More Zigbee devices will follow soon
 
 ## Supported Languages:
 * English
@@ -39,8 +40,18 @@ If possible, please report issues at the issues section on Github otherwise in t
 
 ## Change Log:
 
+### v 1.0.1
+* Add support for [Dimmer - 3 wire (Zigbee)](https://www.robbshop.nl/inbouwdimmer-zigbee-robb-smarrt)   
+* Add 'Set forced brightness' flow action card for Zigbee dimmers   
+* Minor improvements to icons of Dimmer - 3 wire (Z-wave)](https://www.robbshop.nl/inbouwdimmer-zwave-3-draads-robb-smarrt)   
+
 ### v 1.0.0
 * Initial app store release
 * Add support for [Dimmer - 3 wire (Z-wave)](https://www.robbshop.nl/inbouwdimmer-zwave-3-draads-robb-smarrt)   
 * Add support for [Wall controller 2 groups (Z-wave)](https://www.robbshop.nl/wandzender-2v-z-wave-robb-smarrt)  
 * Add support for [Wall controller 8 groups (Z-wave)](https://www.robbshop.nl/wandzender-8v-z-wave-robb-smarrt)    
+
+## Future work:
+* Extend supported Z-wave & Zigbee devices   
+* Add 'Start Dim level change' and 'Stop Dim level change' action cards for Z-wave dimmers   
+* Add 'Start Dim level change' and 'Stop Dim level change' action cards for Zigbee dimmers
