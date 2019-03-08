@@ -1,7 +1,7 @@
 {
 	"id": "ZW_WallController_2",
 	"name": {
-		"en": "Wall controller - 2 group (Z-wave)"
+		"en": "Wall controller - 2 button (Z-wave)"
 	},
 	"icon": "{{driverAssetsPath}}/icon.svg",
 	"images": {
