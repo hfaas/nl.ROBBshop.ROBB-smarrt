@@ -1,0 +1,65 @@
+{
+  "id": "ZW_Dimmer_2wire",
+  "name": {
+    "en": "Dimmer - 2 wire (Z-wave)",
+    "nl": "Inbouwdimmer 2-draads (Z-wave)"
+  },
+  "class": "light",
+  "capabilities": [
+    "dim",
+    "onoff",
+    "meter_power",
+    "measure_power",
+    "measure_voltage",
+    "measure_current"
+  ],
+  "capabilitiesOptions": {
+		"onoff": {
+			"setOnDim": false
+		},
+		"dim": {
+			"opts": {
+				"duration": true
+			}
+		}
+	},
+  "icon": "{{driverAssetsPath}}/icon.svg",
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 816,
+    "productTypeId": [
+      512
+    ],
+    "productId": [
+      53260
+    ],
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "1. Power on the in-wall dimmer and set it into inclusion mode. \nThere are two methods to set the in-wall dimmer into inclusion mode:\n1)Repower on the dimmer, it will be set into inclusion mode automatically, and waiting to be included.\n2) Tripple press the reset button on the dimmer, it will set the plug into inclusion mode.\nThe connected light will stay solid on for 3 seconds to indicate successful inclusion.",
+        "nl": "1. Schakel de inbouwdimmer in en activeer de inclusion modus. \nDe inclusion modus wordt geactiveerd op de volgende twee mmanieren:\n1)Stroom opnieuw inschakelen op de dimmer, waarna de dimmer automatisch de inclusion mode activeerd en wacht om toegevoegd te worden. \n2) Drie keer de reset knop op de dimmer indrukken activeert de inclusion modus.\nDe aangesloten lamp brand gedurende 3 seconden wanneer het toevoegen succesvol afgerond is."
+      }
+    },
+    "unlearnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "To remove the dimmer, triple press the reset button. \nThe dimmer will be set to exclusion mode, and waiting to be excluded, then the dimmer will be excluded to the network.",
+        "nl": "Om de dimmer te verwijderen, druk drie keer de reset knop op de dimmer in. \n De exclusion modus van de dimmer wordt geactiveerd en de dimmer wordt verwijdert uit het netwerk."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Lifeline association group (do not change)",
+          "nl": "Lifeline association group (niet aanpassen)"
+        }
+      }
+    }
+  }
+}

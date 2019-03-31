@@ -1,0 +1,39 @@
+{
+  "type": "dropdown",
+  "zwave": {
+    "index": 8,
+    "size": 1
+  },
+  "label": {
+    "en": "Detect Load type",
+    "nl": "Schakelaar type"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines if load type, minimum brightness, maximum brightness are detected during re-power.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het lamp type, minimale helderheid, maximale helderheid bepaald wordt tijdens het inschakelen."
+  },
+  "value": "0",
+  "values": [
+    {
+      "id": "0",
+      "label": {
+        "en": "Disabled",
+        "nl": "Uitgeschakeld"
+      }
+    },
+    {
+      "id": "1",
+      "label": {
+        "en": "Every time after re-power on",
+        "nl": "Bij iedere inschakeling"
+      }
+    },
+    {
+      "id": "2",
+      "label": {
+        "en": "Only after first re-power on",
+        "nl": "Alleen na eerste inschakeling"
+      }
+    }
+  ]
+}

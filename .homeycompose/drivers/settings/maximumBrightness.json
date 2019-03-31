@@ -1,0 +1,23 @@
+{
+  "value": 100,
+  "label": {
+    "en": "Maximum brightness value",
+    "nl": "Hoogste dim niveau"
+  },
+  "hint": {
+    "en": "Setting maximum brightness value"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the maximum brightness level. Default: 100 %",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het hoogste dim niveau. Standaard: 100 %"
+  },
+  "zwave": {
+    "index": 6,
+    "size": 1
+  },
+  "attr": {
+    "min": 0,
+    "max": 100
+  },
+  "type": "number"
+}

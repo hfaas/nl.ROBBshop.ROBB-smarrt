@@ -8,7 +8,7 @@
     "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de gebruikte MOSFET driving type. Standaard: Fase aansnijding"
   },
   "zwave": {
-    "index": 2,
+    "index": 6,
     "size": 1
   },
   "values": [

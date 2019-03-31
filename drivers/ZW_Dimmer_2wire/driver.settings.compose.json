@@ -1,0 +1,171 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Button behaviour",
+      "nl": "Gedrag knoppen"
+    },
+    "collapsed": false,
+    "children": [
+      {
+        "$extends": "externalSwitchType",
+        "$id": "external_switch_type"
+      },
+      {
+        "$extends": "externalSwitchInclusion",
+        "$id": "external_switch_inclusion",
+        "zwave": {
+          "index": 9,
+          "size": 1
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Dimming",
+      "nl": "Dimmen"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "dimDuration",
+        "$id": "dim_duration"
+      },
+      {
+        "$extends": "minimumBrightness",
+        "$id": "minimum_brightness"
+      },
+      {
+        "$extends": "maximumBrightness",
+        "$id": "maximum_brightness"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power",
+      "nl": "Stroom"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "reportThreshold",
+        "$id": "report_threshold_power_absolute",
+        "label": {
+          "en": "Wattage report threshold (W)",
+          "nl": "Wattahe rapportage drempel (W)"
+        },
+        "zwave": {
+          "index": 14,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 200
+        },
+        "value": 10
+      },
+      {
+        "$extends": "reportThreshold",
+        "$id": "report_threshold_power_relative",
+        "label": {
+          "en": "Wattage report threshold (%)",
+          "nl": "Wattahe rapportage drempel (%)"
+        },
+        "zwave": {
+          "index": 15,
+          "size": 1
+        },
+        "attr": {
+          "min": 0,
+          "max": 100
+        },
+        "value": 20
+      },
+      {
+        "$extends": "reportInterval",
+        "$id": "report_interval_power",
+        "label": {
+          "en": "Wattage report interval (s)",
+          "nl": "Wattage rapportage interval (s)"
+        },
+        "zwave": {
+          "index": 21,
+          "size": 4
+        },
+        "value": 600
+      },
+      {
+        "$extends": "reportInterval",
+        "$id": "report_interval_energy",
+        "label": {
+          "en": "kWh report interval (s)",
+          "nl": "kWh rapportage interval (s)"
+        },
+        "zwave": {
+          "index": 22,
+          "size": 4
+        },
+        "value": 1800
+      },
+      {
+        "$extends": "reportInterval",
+        "$id": "report_interval_voltage",
+        "label": {
+          "en": "Voltage report interval (s)",
+          "nl": "Voltage rapportage interval (s)"
+        },
+        "zwave": {
+          "index": 23,
+          "size": 4
+        }
+      },
+      {
+        "$extends": "reportInterval",
+        "$id": "report_interval_current",
+        "label": {
+          "en": "Current report interval (s)",
+          "nl": "Stroom rapportage interval (s)"
+        },
+        "zwave": {
+          "index": 24,
+          "size": 4
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Other",
+      "nl": "Overige"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "saveState",
+        "$id": "save_state"
+      },
+      {
+        "$extends": "sendBasicReport",
+        "$id": "send_basic_report"
+      },
+
+      {
+        "$extends": "drivingType",
+        "$id": "driving_type",
+        "zwave": {
+          "index": 7,
+          "size": 1
+        }
+      },
+      {
+        "$extends": "detectLoadType",
+        "$id": "detect_load_type"
+      }
+    ]
+  }
+]

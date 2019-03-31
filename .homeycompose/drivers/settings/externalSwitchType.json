@@ -1,0 +1,39 @@
+{
+  "type": "dropdown",
+  "zwave": {
+    "index": 8,
+    "size": 1
+  },
+  "label": {
+    "en": "Switch type",
+    "nl": "Schakelaar type"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines what device is operating the switch.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk apparaat de schakelaar bestuurt."
+  },
+  "value": "0",
+  "values": [
+    {
+      "id": "0",
+      "label": {
+        "en": "Momentary switch",
+        "nl": "Pulsdrukschakelaar"
+      }
+    },
+    {
+      "id": "1",
+      "label": {
+        "en": "Toggle switch",
+        "nl": "Tuimelschakelaar"
+      }
+    },
+    {
+      "id": "2",
+      "label": {
+        "en": "3-way switch",
+        "nl": "Hotelschakelaar"
+      }
+    }
+  ]
+}

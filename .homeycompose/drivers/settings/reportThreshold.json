@@ -1,0 +1,16 @@
+{
+  "value": 0,
+  "label": {
+    "en": "Report threshold",
+    "nl": "Rapportage drempel"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the minimum change in value before reporting changes to Homey.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de minimum verandering van de meetwaarde voordat deze naar Homey wordt gestuurd."
+  },
+  "attr": {
+    "min": 0,
+    "max": 100
+  },
+  "type": "number"
+}
