@@ -12,6 +12,7 @@ This app adds support for the ROBB smarrt Z-wave and Zigbee device sold by [ROBB
 ## Supported devices
 
 ### Z-wave devices
+* [Dimmer - 2 wire](https://www.robbshop.nl/inbouwdimmer-zwave-2-draads-robb-smarrt) (onoff, dim, meter_power, measure_power)
 * [Dimmer - 3 wire](https://www.robbshop.nl/inbouwdimmer-zwave-3-draads-robb-smarrt) (onoff, dim)
 * [Wall controller 2 button](https://www.robbshop.nl/wandzender-2v-z-wave-robb-smarrt) (1x click, Key held, Key released, direct association towards other Z-wave devices)
 * [Wall controller 4 button](https://www.robbshop.nl/wandzender-4v-z-wave-robb-smarrt) (1x click, Key held, Key released, direct association towards other Z-wave devices)   
@@ -40,6 +41,9 @@ Please report issues at the [issues section on Github ](https://github.com/ROBB-
 If possible, please report issues at the issues section on Github otherwise in the above mentioned topic.
 
 ## Change Log:
+
+### v 1.0.3
+* Add support for [Dimmer - 2 wire](https://www.robbshop.nl/inbouwdimmer-zwave-2-draads-robb-smarrt)     
 
 ### v 1.0.2
 * Add support for [Wall controller 4 button (Z-wave)](https://www.robbshop.nl/wandzender-4v-z-wave-robb-smarrt)  
