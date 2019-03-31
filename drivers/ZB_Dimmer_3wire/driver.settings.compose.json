@@ -1,10 +1,20 @@
 [
   {
-    "$extends": "forcedBrightness",
-    "$id": "forced_brightness_level"
-  },
-  {
-    "$extends": "dimTransitionTime",
-    "$id": "dim_transition_time"
+    "type": "group",
+    "label": {
+      "en": "Dimming",
+      "nl": "Dimmen"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "forcedBrightness",
+        "$id": "forced_brightness_level"
+      },
+      {
+        "$extends": "dimTransitionTime",
+        "$id": "dim_transition_time"
+      }
+    ]
   }
 ]

@@ -19,9 +19,10 @@ module.exports = class ZW_Dimmer3wire extends ZwaveDevice {
 				return {
 					Value: (value) ? 'on/enable' : 'off/disable',
 					'Dimming Duration': 'Default',
-				}
+				};
 			},
 		});
+
 		this.registerCapability('dim', 'SWITCH_MULTILEVEL');
 
 		this.registerReportListener('BASIC', 'BASIC_REPORT', (report) => {

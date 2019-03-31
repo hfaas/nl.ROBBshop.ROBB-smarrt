@@ -1,26 +1,58 @@
 [
   {
-    "$extends": "saveState",
-    "$id": "save_state"
+    "type": "group",
+    "label": {
+      "en": "Button behaviour",
+      "nl": "Gedrag knoppen"
+    },
+    "collapsed": false,
+    "children": [
+      {
+        "$extends": "externalSwitchInclusion",
+        "$id": "external_switch_inclusion"
+      }
+    ]
   },
   {
-    "$extends": "sendBasicReport",
-    "$id": "send_basic_reprot"
+    "type": "group",
+    "label": {
+      "en": "Dimming",
+      "nl": "Dimmen"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "dimDuration",
+        "$id": "dim_duration"
+      },
+      {
+        "$extends": "minimumBrightness",
+        "$id": "minimum_brightness"
+      }
+    ]
   },
   {
-    "$extends": "dimDuration",
-    "$id": "dim_duration"
-  },
-  {
-    "$extends": "minimumBrightness",
-    "$id": "minimum_brightness"
-  },
-  {
-    "$extends": "drivingType",
-    "$id": "driving_type"
-  },
-  {
-    "$extends": "externalSwitch",
-    "$id": "external_switch"
+    "type": "group",
+    "label": {
+      "en": "Other",
+      "nl": "Overige"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "saveState",
+        "$id": "save_state"
+      },
+      {
+        "$extends": "sendBasicReport",
+        "$id": "send_basic_report"
+      },
+
+      {
+        "$extends": "drivingType",
+        "$id": "driving_type"
+      }
+    ]
   }
+
 ]
