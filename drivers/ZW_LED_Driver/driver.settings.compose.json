@@ -1,0 +1,136 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Stage",
+      "nl": "Stage"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "id": "cool_light_stage_mode",
+        "value": "0",
+        "label": {
+          "en": "Stage mode",
+          "nl": "Stage mode"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the cool light stage mode (when receiving Command Class Switch switching light band type, it recovers to normal lighting mode).",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de 'cool light stage' modus (bij het ontvangen van Command Class Switch licht band type, wordt het hersteld naar de normale verlichtingsmodus)."
+        },
+        "zwave": {
+          "index": 5,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Cool light stage mode (default)",
+              "nl": "Licht stage modus (standaard)"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Fade in and fade out mode, colors set by parameter 8 (Stage hue)",
+              "nl": "Fade in en fade out modus, kleuren worden geset met parameter 8 (Stage hue)"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Flash mode, colors set by parameter 8 (Stage hue)",
+              "nl": "Flash modus, kleuren worden geset met parameter 8 (Stage hue)"
+            }
+          }
+        ],
+        "type": "dropdown"
+      },
+      {
+        "id": "stage_speed",
+        "label": {
+          "en": "Stage speed",
+          "nl": "Stage snelheid"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the speed of stage mode. Values: 1 - 255, 0: slowest, 255: fastest. Default: 243",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de snelheid van de stage mode. Waardes: 1 - 255, 0: Langzaamst, 255: snelst. Standaard: 243"
+        },
+        "zwave": {
+          "index": 6,
+          "size": 1,
+          "signed": false
+        },
+        "type": "number",
+        "value": 243,
+        "attr": {
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "id": "stage_execution_count",
+        "label": {
+          "en": "Stage execution count",
+          "nl": "Stage aantal uitvoeringen"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the amount of times the stage mode is executed. Values: 1 - 255, 0: unlimited. Default: 0",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het aantal keren dat de stage mode word uitgevoerd. Waardes: 1 - 255, 0: oneindig. Standaard: 0"
+        },
+        "zwave": {
+          "index": 7,
+          "size": 1,
+          "signed": false
+        },
+        "type": "number",
+        "value": 0,
+        "attr": {
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "id": "stage_hue",
+        "label": {
+          "en": "Stage hue",
+          "nl": "Stage hue"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines The Hue value of the stage mode (is only valid for fade in and fade out and flash mode). Values: 1 - 255. Default: 0",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de Hue waarde van de stage mode (is alleen geld voor 'fade in and face out' en 'flash' modes). Waardes: 1 - 255. Standaard: 0"
+        },
+        "zwave": {
+          "index": 8,
+          "size": 1,
+          "signed": false
+        },
+        "type": "number",
+        "value": 0,
+        "attr": {
+          "min": 0,
+          "max": 255
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Other",
+      "nl": "Overige"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "saveState",
+        "$id": "save_state"
+      },
+      {
+        "$extends": "sendBasicReport",
+        "$id": "send_basic_report"
+      }
+    ]
+  }
+]

@@ -1006,6 +1006,244 @@
       ]
     },
     {
+      "id": "ZW_LED_Driver",
+      "name": {
+        "en": "LED driver - 4 channel (Z-wave)",
+        "nl": "LED driver - 4 kannaals (Z-wave)"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "icon": "/drivers/ZW_LED_Driver/assets/icon.svg",
+      "images": {
+        "large": "/drivers/ZW_LED_Driver/assets/images/large.png",
+        "small": "/drivers/ZW_LED_Driver/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 816,
+        "productTypeId": [
+          512
+        ],
+        "productId": [
+          53250
+        ],
+        "zwaveAllianceProductId": 2773,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2773/Z-Wave%20LED%20Dimmer%20SR-ZV9101FX-EU%20User%20Manual.pdf",
+        "learnmode": {
+          "image": "/drivers/ZW_LED_Driver/assets/learnmode.svg",
+          "instruction": {
+            "en": "Power on the LED dimmer, make sure the LED dimmer does not belong to any Z-Wave network.\n\t1) When the connected LED light flashes quickly for 6 seconds, it means the LED dimmer does not belong to any network. Triple press the 'Inclusion/Exclusion' button.\n\t2) When the connected LED light is under solid 'on' status, it means the LED dimmer has already been included into a network. First you have to set the LED dimmer into exclusion mode, once excluded, it will be set into inclusion mode automatically, and waiting to be included.\nThe connected LED light stays solid on 3s to indicate successful inclusion.",
+            "nl": "Schakel de LED-dimmer in, zorg ervoor dat de LED-dimmer niet tot een Z-Wave-netwerk behoort. \n\t1) Wanneer de aangesloten LED-lamp snel knippert gedurende 6 seconden, betekent dit dat de LED-dimmer niet tot een netwerk behoort. Druk driemaal op de knop 'Inclusion/Exclusion'. \n\t2) Wanneer de aangesloten LED-lamp continu brandt, betekent dit dat de LED-dimmer al is opgenomen in een Z-Wave netwerk. Eerst moet je de LED-dimmer in de 'exclusion' modus zetten, eenmaal uitgesloten, wordt deze automatisch in de inclusiemodus gezet en wacht op opname.\nDe aangesloten LED-lamp blijft stabiel op 3s bij succesvolle 'inclusion'."
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/ZW_LED_Driver/assets/learnmode.svg",
+          "instruction": {
+            "en": "Triple press the 'inclusion/exclusion' button, the LED dimmer will be set to exclusion mode, the connected LED light will flash quickly for 6 seconds then connected LED light stays solid on 3s to indicate successful exclusion.",
+            "nl": "Druk driemaal op de knop 'inclusion/exclusion', de LED-dimmer wordt ingesteld op de exclusion mode, de aangesloten LED-lamp knippert snel gedurende 6 seconden en de aangesloten LED-lamp brandt continu op 3 seconden om succesvolle uitsluiting aan te geven."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Lifeline association group (do not change)",
+              "nl": "Lifeline association group (niet aanpassen)"
+            }
+          }
+        }
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Stage",
+            "nl": "Stage"
+          },
+          "collapsed": true,
+          "children": [
+            {
+              "id": "cool_light_stage_mode",
+              "value": "0",
+              "label": {
+                "en": "Stage mode",
+                "nl": "Stage mode"
+              },
+              "hint": {
+                "en": "This parameter (5) determines the cool light stage mode (when receiving Command Class Switch switching light band type, it recovers to normal lighting mode).",
+                "nl": "Deze parameter (5) bepaalt de 'cool light stage' modus (bij het ontvangen van Command Class Switch licht band type, wordt het hersteld naar de normale verlichtingsmodus)."
+              },
+              "zwave": {
+                "index": 5,
+                "size": 1
+              },
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Cool light stage mode (default)",
+                    "nl": "Licht stage modus (standaard)"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "Fade in and fade out mode, colors set by parameter 8 (Stage hue)",
+                    "nl": "Fade in en fade out modus, kleuren worden geset met parameter 8 (Stage hue)"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "Flash mode, colors set by parameter 8 (Stage hue)",
+                    "nl": "Flash modus, kleuren worden geset met parameter 8 (Stage hue)"
+                  }
+                }
+              ],
+              "type": "dropdown"
+            },
+            {
+              "id": "stage_speed",
+              "label": {
+                "en": "Stage speed",
+                "nl": "Stage snelheid"
+              },
+              "hint": {
+                "en": "This parameter (6) determines the speed of stage mode. Values: 1 - 255, 0: slowest, 255: fastest. Default: 243",
+                "nl": "Deze parameter (6) bepaalt de snelheid van de stage mode. Waardes: 1 - 255, 0: Langzaamst, 255: snelst. Standaard: 243"
+              },
+              "zwave": {
+                "index": 6,
+                "size": 1,
+                "signed": false
+              },
+              "type": "number",
+              "value": 243,
+              "attr": {
+                "min": 0,
+                "max": 255
+              }
+            },
+            {
+              "id": "stage_execution_count",
+              "label": {
+                "en": "Stage execution count",
+                "nl": "Stage aantal uitvoeringen"
+              },
+              "hint": {
+                "en": "This parameter (7) determines the amount of times the stage mode is executed. Values: 1 - 255, 0: unlimited. Default: 0",
+                "nl": "Deze parameter (7) bepaalt het aantal keren dat de stage mode word uitgevoerd. Waardes: 1 - 255, 0: oneindig. Standaard: 0"
+              },
+              "zwave": {
+                "index": 7,
+                "size": 1,
+                "signed": false
+              },
+              "type": "number",
+              "value": 0,
+              "attr": {
+                "min": 0,
+                "max": 255
+              }
+            },
+            {
+              "id": "stage_hue",
+              "label": {
+                "en": "Stage hue",
+                "nl": "Stage hue"
+              },
+              "hint": {
+                "en": "This parameter (8) determines The Hue value of the stage mode (is only valid for fade in and fade out and flash mode). Values: 1 - 255. Default: 0",
+                "nl": "Deze parameter (8) bepaalt de Hue waarde van de stage mode (is alleen geld voor 'fade in and face out' en 'flash' modes). Waardes: 1 - 255. Standaard: 0"
+              },
+              "zwave": {
+                "index": 8,
+                "size": 1,
+                "signed": false
+              },
+              "type": "number",
+              "value": 0,
+              "attr": {
+                "min": 0,
+                "max": 255
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Other",
+            "nl": "Overige"
+          },
+          "collapsed": true,
+          "children": [
+            {
+              "id": "save_state",
+              "value": "0",
+              "label": {
+                "en": "Restore state after power failure",
+                "nl": "Herstel status na stroomonderbreking"
+              },
+              "hint": {
+                "en": "This parameter (2) determines whether after a power failure the device should be restored to the state it had before the power failure.",
+                "nl": "Deze parameter (2) bepaalt of het apparaat na een stroomonderbreking moet worden ingesteld zoals deze voor de stroomonderbreking stond ingesteld."
+              },
+              "zwave": {
+                "index": 2,
+                "size": 1
+              },
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Turn off light (default)",
+                    "nl": "Schakel de lamp uit (standaard)"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "Turn on light",
+                    "nl": "Schakel de lamp in"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "Restore state",
+                    "nl": "Herstel toestand"
+                  }
+                }
+              ],
+              "type": "dropdown"
+            },
+            {
+              "id": "send_basic_report",
+              "value": true,
+              "label": {
+                "en": "Send `BASIC report`",
+                "nl": "Stuur `BASIC report`"
+              },
+              "hint": {
+                "en": "This parameter (3) determines whether the `BASIC report` is send to the Lifeline when the load state changed. Default: activated",
+                "nl": "Deze parameter (3) bepaalt of het `BASIC report` wordt verstuurd naar de controller wanneer de toestand van de dimmer verandert. Standaard: ingeschakeld"
+              },
+              "zwave": {
+                "index": 3,
+                "size": 1
+              },
+              "type": "checkbox"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "ZW_WallController_2",
       "name": {
         "en": "Wall controller - 2 button (Z-wave)"
