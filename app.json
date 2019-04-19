@@ -1008,8 +1008,8 @@
     {
       "id": "ZW_LED_Driver",
       "name": {
-        "en": "LED driver - 4 channel (Z-wave)",
-        "nl": "LED driver - 4 kannaals (Z-wave)"
+        "en": "LED driver (Z-wave)",
+        "nl": "LED driver (Z-wave)"
       },
       "class": "light",
       "capabilities": [
